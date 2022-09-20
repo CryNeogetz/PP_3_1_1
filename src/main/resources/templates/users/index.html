@@ -13,6 +13,7 @@
             <th>id</th>
             <th>name</th>
             <th>age</th>
+            <th>Show</th>
         </tr>
         </thead>
         <tbody>
@@ -20,6 +21,9 @@
             <td th:text="${users.getId()}"></td>
             <td th:text="${users.getName()}"></td>
             <td th:text="${users.getAge}"></td>
+            <td>
+                <a th:href="@{/users/{id}(id=${users.getId()})}" th:text="${'Show' + users.getId()}" target="_blank" />
+            </td>
         </tr>
         </tbody>
     </table>
